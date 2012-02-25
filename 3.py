@@ -1,5 +1,6 @@
+number=600851475143 # Find the largest prime factor of this number
 prime_factors=[]
-number=600851475143
+
 i=2
 
 while number!=1:
