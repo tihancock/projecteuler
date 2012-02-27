@@ -1,7 +1,7 @@
 import string
 from CommonUtils import isPrime
 
-primes = [int(i) for i in string.split(open('/home/tom/Projects/ProjectEuler/files/primes1.txt','r').read())]
+primes = [int(i) for i in string.split(open('files/primes1.txt','r').read())]
 
 num_found=0
 summation=0

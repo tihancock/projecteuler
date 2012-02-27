@@ -1,7 +1,7 @@
 from CommonUtils import isPrime
 import string
 
-primes = [int(i) for i in string.split(open('/home/tom/Projects/ProjectEuler/files/primes1.txt','r').read())]
+primes = [int(i) for i in string.split(open('files/primes1.txt','r').read())]
 
 primes_of_interest=[p for p in primes if p<1000000]
 

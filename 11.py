@@ -1,6 +1,6 @@
 import string
 
-f = open('/home/tom/Projects/ProjectEuler/files/20_20_grid.txt', 'r')
+f = open('files/20_20_grid.txt', 'r')
 file_contents=f.read()
 largest_seq=0
 

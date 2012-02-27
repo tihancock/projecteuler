@@ -1,6 +1,6 @@
 import re
 
-f = open('/home/tom/1000_digit_number.txt', 'r')
+f = open('files/1000_digit_number.txt', 'r')
 file_contents=f.read()
 
 numbers = re.sub("[^0-9]","",file_contents)

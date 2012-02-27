@@ -1,6 +1,6 @@
 import re
 
-f = open('/home/tom/Projects/ProjectEuler/files/words.txt','r')
+f = open('files/words.txt','r')
 
 words=re.sub('"','',f.read()).split(',')
 

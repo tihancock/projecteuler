@@ -4,11 +4,11 @@ i=1
 
 while i < 1000000:
     num = i
-    seq   = 0
+    seq = 0
     
     while num != 1:
         if (num%2==0):
-            num=num/2
+            num/=2
         else:
             num=3*num+1
         seq+=1

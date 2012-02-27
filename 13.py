@@ -1,5 +1,5 @@
 import string
 
-lines=string.split(open('/home/tom/Projects/ProjectEuler/files/100_50_digit_nums.txt', 'r').read(), "\n")
+lines=string.split(open('files/100_50_digit_nums.txt', 'r').read(), "\n")
 
-print sum([int(i) for i in lines])
+print str(sum([int(i) for i in lines]))[:10:]

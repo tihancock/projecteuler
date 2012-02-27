@@ -1,7 +1,7 @@
 import string
 import re
 
-f=open('/home/tom/Projects/ProjectEuler/files/names.txt','r')
+f=open('files/names.txt','r')
 file_contents=f.read()
 
 sorted_names=sorted(string.split(re.sub("\"", "", file_contents), ","))

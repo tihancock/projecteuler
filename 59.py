@@ -1,6 +1,6 @@
 import string, sys
 
-s = open('/home/tom/Projects/ProjectEuler/files/cipher1.txt','r').read()
+s = open('files/cipher1.txt','r').read()
 
 chars           = [int(c) for c in string.split(s.rstrip(),',')]
 decrypted_chars = [None]*len(chars)

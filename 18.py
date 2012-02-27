@@ -1,7 +1,7 @@
 from itertools import *
 import string
 
-f = open('/home/tom/Projects/ProjectEuler/files/triangle.txt', 'r')
+f = open('files/triangle.txt', 'r')
 file_contents=f.read()
 
 lines=string.split(file_contents, "\n")
