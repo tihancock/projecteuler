@@ -20,4 +20,4 @@ if [ difference=="" ]; then
 else
     echo "The following solution attempts are incorrect:"
     echo diff
-done
+fi

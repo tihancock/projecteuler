@@ -8,6 +8,7 @@ fi
 
 for file in `ls -v [0-9]*.py`; do
     problem_num=${file%.*}
+    echo $problem_num
     execution_time=`(/usr/bin/time --format="%E" python $file) 2>&1 1>/dev/null`
     echo "$problem_num: $execution_time" >> $output_file
 done

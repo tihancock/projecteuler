@@ -1,5 +1,3 @@
-import math
+from math import factorial
 
-factorialed=str(math.factorial(100))
-
-print sum([int(factorialed[i]) for i in range(len(factorialed))])
+print sum([int(i) for i in str(factorial(100))])

@@ -8,6 +8,7 @@ lines=string.split(file_contents, "\n")
 matrix=[string.split(i," ") for i in lines]
 number_matrix=[map(lambda x: int(x), matrix[i]) for i in range(20)]
 
+# Iterate over every product of 4 adjacent numbers
 for i in range(4, 20):
     for j in range(4, 20):
         across=number_matrix[i][j]*number_matrix[i][j-1]*number_matrix[i][j-2]*number_matrix[i][j-3]

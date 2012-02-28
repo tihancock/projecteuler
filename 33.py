@@ -18,5 +18,4 @@ for j in range(10,100):
             i_2==j_2 and Fraction(i_1,j_1)==Fraction(i,j):
             result*=Fraction(i,j)
 
-print result
-            
+print result.denominator

@@ -10,11 +10,12 @@ triangle=[string.split(i, " ") for i in lines]
 
 max_sum=0
 
+# Generate a 14 character binary string representing each path
 for i in range(16384):
     index=0
     max_path=""
     sum=int(triangle[0][0])
-    # Generates a 14 digit long binary string to indicate left or right
+    # 0 indicates left, 1 right
     path=bin(i)[2::].zfill(14)
 
     for j in range(14):
