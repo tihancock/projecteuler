@@ -27,3 +27,6 @@
     (reduce * (map (fn [[k v]] (int (Math/pow k v))) factor-counts))))
 
 (smallest-multiple 20)
+
+;; 6
+(- (int (Math/pow (reduce + (range 1 101)) 2)) (int (reduce + (map #(Math/pow % 2) (range 1 101)))))
