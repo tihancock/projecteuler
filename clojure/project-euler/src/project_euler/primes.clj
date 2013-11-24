@@ -2,7 +2,11 @@
 
 (defn is-prime
   [x]
-  (not (some #(= 0 (mod x %)) (range 2 (Math/sqrt x)))))
+  (not (some #(= 0 (mod x %)) (range 2 (+ 1 (int (Math/sqrt x)))))))
+
+(defn lazy-primes
+  []
+  (filter is-prime (iterate inc 2)))
 
 (defn smallest-prime-factor
   [x]

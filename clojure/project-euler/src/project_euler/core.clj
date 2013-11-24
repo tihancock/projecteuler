@@ -30,3 +30,6 @@
 
 ;; 6
 (- (int (Math/pow (reduce + (range 1 101)) 2)) (int (reduce + (map #(Math/pow % 2) (range 1 101)))))
+
+;; 7
+(nth (primes/lazy-primes) (dec 10001))
