@@ -19,11 +19,11 @@
 (first (reverse (sort (filter #(= (str %) (clojure.string/reverse (str %))) (flatten (map #(map (partial * %) (range 999 0 -1)) (range 999 0 -1)))))))
 
 ;; 5
-;; FIXME - most definitely does not work right now
 (defn smallest-multiple
   [range-end]
-  (letfn [(hcf [a b]
-            (first (filter #(= 0 (mod a %)) (filter #(= 0 (mod b %)) (range 1 b)))))
-          (contrib [current x]
-            (* current (/ x (hcf current x))))]
-    (reduce contrib (range 2 range-end))))
+  (let [prime-factors (map #(primes/prime-factors %) (range 1 (inc range-end)))
+        freqs (map frequencies prime-factors)
+        factor-counts (apply merge-with #(if (> %1 %2) %1 %2) freqs)]
+    (reduce * (map (fn [[k v]] (int (Math/pow k v))) factor-counts))))
+
+(smallest-multiple 20)
