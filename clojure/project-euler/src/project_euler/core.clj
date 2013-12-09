@@ -251,5 +251,8 @@
   (reduce + pos-name-values))
 
 ;; 23
-(let [abundants (set (filter #(> (reduce + (proper-divisors %)) %) (range 281)))]
-  (first abundants))
+(let [abundants (filter #(> (sum-proper-divisors %) %) (range 1 28124))
+      abundant-sums (set (for [x abundants
+                               y abundants]
+                           (+ x y)))]
+  (reduce + (filter #(not (contains? abundant-sums %)) (range 1 28124))))
