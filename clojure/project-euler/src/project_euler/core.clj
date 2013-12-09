@@ -1,6 +1,7 @@
 (ns project-euler.core
   (:require [project-euler.primes :as primes]
-            [clojure.string :as string]))
+            [clojure.string :as string]
+            [clojure.math.combinatorics :as combinatorics]))
 
 ;; 1
 (- (+ (reduce + (range 0 1000 3)) (reduce + (range 0 1000 5)))
@@ -256,3 +257,6 @@
                                y abundants]
                            (+ x y)))]
   (reduce + (filter #(not (contains? abundant-sums %)) (range 1 28124))))
+
+;; 24
+(apply str (nth (combinatorics/permutations (range 0 10)) (- 1e6 1)))
