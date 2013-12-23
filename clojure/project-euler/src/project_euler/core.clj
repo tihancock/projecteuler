@@ -8,11 +8,11 @@
    (reduce + (range 0 1000 15)))
 
 ;; 2
-;; nice lazy fibonacci sequence implementation from wikibooks
-(def fib-seq
-  (lazy-cat [1 2] (map + (rest fib-seq) fib-seq)))
+(defn fib-seq
+  [fst snd]
+  (lazy-seq (cons fst (fib-seq snd (+ fst snd)))))
 
-(reduce + (filter even? (take-while (partial > 4e6) fib-seq)))
+(reduce + (filter even? (take-while (partial > 4e6) (fib-seq 1 2))))
 
 ;; 3
 (last (primes/prime-factors 600851475143))
@@ -260,3 +260,6 @@
 
 ;; 24
 (apply str (nth (combinatorics/permutations (range 0 10)) (- 1e6 1)))
+
+;; 25
+(inc (count (take-while #(> 1000 (count (str %))) (fib-seq 1N 1N))))
