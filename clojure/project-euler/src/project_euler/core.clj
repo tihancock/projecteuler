@@ -263,3 +263,14 @@
 
 ;; 25
 (inc (count (take-while #(> 1000 (count (str %))) (fib-seq 1N 1N))))
+
+;; 26
+
+;; 27
+(defn num-primes
+  [a b]
+  (count (take-while #(primes/is-prime %) (map (fn [n] (+ (* n n) (* a n) b)) (iterate inc 0)))))
+
+(second (apply max-key first (for [a (range -999 1000)
+                                   b (range -999 1000)]
+                               [(num-primes a b) (* a b)])))

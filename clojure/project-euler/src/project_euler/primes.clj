@@ -2,7 +2,7 @@
 
 (defn is-prime
   [x]
-  (not (some #(= 0 (mod x %)) (range 2 (+ 1 (int (Math/sqrt x)))))))
+  (and (> x 1) (not (some #(= 0 (mod x %)) (range 2 (+ 1 (int (Math/sqrt x))))))))
 
 (defn lazy-primes
   []
