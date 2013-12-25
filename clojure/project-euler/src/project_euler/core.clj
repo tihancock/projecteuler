@@ -274,3 +274,10 @@
 (second (apply max-key first (for [a (range -999 1000)
                                    b (range -999 1000)]
                                [(num-primes a b) (* a b)])))
+
+;; 28
+
+;; 29
+(count (distinct (for [a (range 2 101)
+                       b (range 2 101)]
+                   (.pow (BigInteger/valueOf a) b))))
