@@ -281,3 +281,11 @@
 (count (distinct (for [a (range 2 101)
                        b (range 2 101)]
                    (.pow (BigInteger/valueOf a) b))))
+
+;; 30
+(defn sum-fifth-powers
+  [x]
+  (let [digits (map #(Integer/parseInt %) (rest (clojure.string/split (str x) #"")))]
+    (reduce + (map #(int (Math/pow % 5)) digits))))
+
+(reduce + (filter #(= % (sum-fifth-powers %)) (range 10 1000000)))
